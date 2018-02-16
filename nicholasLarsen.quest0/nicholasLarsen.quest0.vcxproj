@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,6 +118,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\MagicRoom.cpp" />
+    <ClCompile Include="source\MagicRoomFactory.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\NormalRoom.cpp" />
+    <ClCompile Include="source\NormalRoomFactory.cpp" />
+    <ClCompile Include="source\Room.cpp" />
+    <ClCompile Include="source\RoomMap.cpp" />
+    <ClCompile Include="source\ThirdParty\tinyxml\tinystr.cpp" />
+    <ClCompile Include="source\ThirdParty\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="source\ThirdParty\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="source\ThirdParty\tinyxml\tinyxmlparser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\definitions.h" />
+    <ClInclude Include="source\MagicRoom.h" />
+    <ClInclude Include="source\MagicRoomFactory.h" />
+    <ClInclude Include="source\NormalRoom.h" />
+    <ClInclude Include="source\NormalRoomFactory.h" />
+    <ClInclude Include="source\Room.h" />
+    <ClInclude Include="source\RoomFactory.h" />
+    <ClInclude Include="source\RoomMap.h" />
+    <ClInclude Include="source\ThirdParty\tinyxml\tinystr.h" />
+    <ClInclude Include="source\ThirdParty\tinyxml\tinyxml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Config\puzzle.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Config\test.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
