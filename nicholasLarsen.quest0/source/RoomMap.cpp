@@ -65,6 +65,7 @@ void RoomMap::randomizeRooms()
 {
 	//Create a vector to store the rooms in
 	std::vector<Room*> roomShuffle;
+	std::default_random_engine randomEngine;
 	//cycle through rooms and fill array with identifiers
 	for (std::map<std::string, Room*>::iterator it=rooms.begin(); it != rooms.end(); it++)
 	{
@@ -72,8 +73,7 @@ void RoomMap::randomizeRooms()
 	}
 	
 	//shuffle vector roomShuffle
-	std::random_shuffle(roomShuffle.begin(), roomShuffle.end());
-
+	std::shuffle(roomShuffle.begin(), roomShuffle.end(), randomEngine);
 
 	//iterate through rooms setting the new identifiers (This code should be very similar to the first for loop)
 	//Reset the counter because idk how to do it in the for setup, I know you can though.

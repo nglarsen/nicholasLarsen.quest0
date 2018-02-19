@@ -24,7 +24,7 @@ int main()
 
 
 	//Was having issues with configFile not taking the relative path.
-	const char* configFile("C:\\Users\\larsennicholasg\\source\\repos\\nicholasLarsen.quest0\\nicholasLarsen.quest0\\Config\\puzzle.xml");
+	const char* configFile("D:\\Users\\Skath1x\\Documents\\GitHub\\nicholasLarsen.quest0\\nicholasLarsen.quest0\\Config\\puzzle.xml");
 	//const char* configFile("..\\Config\\puzzle.xml");
 	std::cout << configFile;
 	//Initialize Resource Management
